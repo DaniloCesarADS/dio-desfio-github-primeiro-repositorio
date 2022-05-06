@@ -1,0 +1,182 @@
+***********************************************************************************************************************
+Feito clone do repositório numa pasta da máquina e acessado a pasta para modificar/ criar conteúdo local para versionar
+novamente e subir para o repositório na núvem:
+
+Resumo:
+
+git clone;
+cd pasta/repositorio;
+git status;
+* À princípio, nad para commitar antes de criar arquivo no repositório/pasta local;
+* Criado arquivo local com anotações;
+git status;
+* Git detectou dados para serem commitados;
+git add .;
+git commit -m ¨Mensagem descritivado commit¨
+git status;
+* Precisa enviar para repositório online com o git push;
+git push origin main/master;
+*Pode pedir autenticação;
+git status;
+* Atualizado. Nada para commitar.
+***********************************************************************************************************************
+
+Danilo@Lab MINGW64 ~/Documents/DIO/Git/DIO
+$ git clone https://github.com/DaniloCesarADS/dio-desfio-github-primeiro-repositorio.git
+Cloning into 'dio-desfio-github-primeiro-repositorio'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), 1.38 KiB | 5.00 KiB/s, done.
+
+Danilo@Lab MINGW64 ~/Documents/DIO/Git/DIO
+$ cd dio-desfio-github-primeiro-repositorio
+
+Danilo@Lab MINGW64 ~/Documents/DIO/Git/DIO/dio-desfio-github-primeiro-repositorio (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Danilo@Lab MINGW64 ~/Documents/DIO/Git/DIO/dio-desfio-github-primeiro-repositorio (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        "Introdu\303\247\303\243o ao Git e ao GitHub/"
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Danilo@Lab MINGW64 ~/Documents/DIO/Git/DIO/dio-desfio-github-primeiro-repositorio (main)
+$ git add .
+
+Danilo@Lab MINGW64 ~/Documents/DIO/Git/DIO/dio-desfio-github-primeiro-repositorio (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   "Introdu\303\247\303\243o ao Git e ao GitHub/Anota\303\247\303\265es.txt"
+
+
+Danilo@Lab MINGW64 ~/Documents/DIO/Git/DIO/dio-desfio-github-primeiro-repositorio (main)
+$ git commit -m "Inclusão das anotações do curso de Git/GitHub"
+[main 2e714f1] Inclus├úo das anota├º├Áes do curso de Git/GitHub
+ 1 file changed, 2 insertions(+)
+ create mode 100644 "Introdu\303\247\303\243o ao Git e ao GitHub/Anota\303\247\303\265es.txt"
+
+Danilo@Lab MINGW64 ~/Documents/DIO/Git/DIO/dio-desfio-github-primeiro-repositorio (main)
+$ Git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Danilo@Lab MINGW64 ~/Documents/DIO/Git/DIO/dio-desfio-github-primeiro-repositorio (main)
+$ git push origin main
+Logon failed, use ctrl+c to cancel basic credential prompt.
+error: unable to read askpass response from 'C:/Program Files/Git/mingw64/libexec/git-core/git-gui--askpass'
+Password for 'https://Hx888gitR9000@github.com':
+Danilo@Lab MINGW64 ~/Documents/DIO/Git/DIO/dio-desfio-github-primeiro-repositorio (main)
+$ git push origin main
+Logon failed, use ctrl+c to cancel basic credential prompt.
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/DaniloCesarADS/dio-desfio-github-primeiro-repositorio.git/'
+
+Danilo@Lab MINGW64 ~/Documents/DIO/Git/DIO/dio-desfio-github-primeiro-repositorio (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Danilo@Lab MINGW64 ~/Documents/DIO/Git/DIO/dio-desfio-github-primeiro-repositorio (main)
+$ Git push origin main
+Logon failed, use ctrl+c to cancel basic credential prompt.
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/DaniloCesarADS/dio-desfio-github-primeiro-repositorio.git/'
+
+****************************************************************************************************************************
+
+Segunda tentativa de atualização de versão, após atualizar o Git por conta do fim do suporte a senha de login da versão antiga:
+
+****************************************************************************************************************************
+
+Danilo@Lab MINGW64 ~/Documents/DIO/Git/DIO
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+Danilo@Lab MINGW64 ~/Documents/DIO/Git/DIO
+$ cd dio-desfio-github-primeiro-repositorio
+
+Danilo@Lab MINGW64 ~/Documents/DIO/Git/DIO/dio-desfio-github-primeiro-repositorio (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   "Introdu\303\247\303\243o ao Git e ao GitHub/Anota\303\247\303\265es.txt"
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Danilo@Lab MINGW64 ~/Documents/DIO/Git/DIO/dio-desfio-github-primeiro-repositorio (main)
+$ git add .
+
+Danilo@Lab MINGW64 ~/Documents/DIO/Git/DIO/dio-desfio-github-primeiro-repositorio (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   "Introdu\303\247\303\243o ao Git e ao GitHub/Anota\303\247\303\265es.txt"
+
+
+Danilo@Lab MINGW64 ~/Documents/DIO/Git/DIO/dio-desfio-github-primeiro-repositorio (main)
+$ git commit -m"Inclusão das anotações do curso de Git/GitHub"
+[main 7a6c8cc] Inclusão das anotações do curso de Git/GitHub
+ 1 file changed, 2 insertions(+)
+
+Danilo@Lab MINGW64 ~/Documents/DIO/Git/DIO/dio-desfio-github-primeiro-repositorio (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Danilo@Lab MINGW64 ~/Documents/DIO/Git/DIO/dio-desfio-github-primeiro-repositorio (main)
+$ git push origin main
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 900 bytes | 450.00 KiB/s, done.
+Total 8 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/DaniloCesarADS/dio-desfio-github-primeiro-repositorio.git
+   2ca782d..7a6c8cc  main -> main
+
+Danilo@Lab MINGW64 ~/Documents/DIO/Git/DIO/dio-desfio-github-primeiro-repositorio (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Danilo@Lab MINGW64 ~/Documents/DIO/Git/DIO/dio-desfio-github-primeiro-repositorio (main)
+$
+
